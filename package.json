@@ -1,0 +1,31 @@
+{
+  "name": "@enesflow/qwikflow",
+  "description": "Custom Qwik hooks and utilities",
+  "version": "0.0.1",
+  "main": "build/index.js",
+  "scripts": {
+    "prepare": "ts-patch install -s",
+    "build": "pnpm exec rimraf build && tsc",
+    "start": "node build/index.js",
+    "ex": "pnpm build && pnpm start",
+    "dev": "tsc-watch --onSuccess \"npm start\"",
+    "build:dev": "tsc-watch",
+    "prod": "pnpm run build && npm publish --no-git-checks"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@builder.io/qwik": "^1.2.7"
+  },
+  "devDependencies": {
+    "@types/node": "^20.4.6",
+    "nodemon": "^2.0.22",
+    "rimraf": "^5.0.1",
+    "ts-patch": "^3.0.2",
+    "tsc-watch": "^6.0.4",
+    "typescript": "^5.1.6",
+    "typescript-transform-paths": "^3.4.6"
+  }
+}
